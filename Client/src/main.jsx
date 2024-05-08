@@ -1,17 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <div className="font-lato">Hello world! ke koro tomra </div>,
-  },
-]);
+import { RouterProvider } from "react-router-dom";
+import router from "./Routes/Routes";
+import AuthProvider from "./Providers/AuthProvider";
+import { Toaster } from "react-hot-toast";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+      <Toaster></Toaster>
+    </AuthProvider>
   </React.StrictMode>
 );
