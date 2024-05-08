@@ -1,7 +1,11 @@
+import Carousel from "../../Components/Carousel";
+import TabCategories from "../../Components/TabCategories";
+
 const Home = () => {
   return (
     <div>
-      <h1>This is home</h1>
+     <Carousel></Carousel>
+     <TabCategories></TabCategories>
     </div>
   );
 };
